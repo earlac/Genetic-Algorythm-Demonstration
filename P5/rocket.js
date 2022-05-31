@@ -2,7 +2,7 @@
 // Constructor function
 function Rocket(dna) {
   // Physics of rocket at current instance
-  this.pos = createVector(width / 2, height);
+  this.pos = createVector(14, height/2);
   this.vel = createVector();
   this.acc = createVector();
   // Checkes rocket has reached target

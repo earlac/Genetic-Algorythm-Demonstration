@@ -13,7 +13,8 @@ function setup() {
   lifeP = createP();
   popP = createP();
   genP = createP();
-  target = createVector(width / 2, 50);
+  rocketPop = createP();
+  target = createVector(370, height/2);
 }
 
 function draw() {
@@ -21,7 +22,8 @@ function draw() {
   population.run();
   lifeP.html("Esperanza de vida: " +count);
   genP.html("Generacion: " + population.generations + "<br>");
-  popP.html("Population Size: " + popsize + "<br>");
+  popP.html("Tamano de la poblacion: " + popsize + "<br>");
+
 
   count++;
   if (count == lifespan) {
@@ -29,5 +31,6 @@ function draw() {
     population.selection();
     count = 0;
   }
-  ellipse(target.x, target.y, 16, 16);  // Crea el objetivo a alcanzar
+  ellipse(target.x, target.y, 16, 16);
+  fill('rgb(100%,0%,10%)');  // Crea el objetivo a alcanzar
 }

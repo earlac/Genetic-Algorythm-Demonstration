@@ -41,29 +41,22 @@ function Population() {
 
 
   };
-  // Selects appropriate genes for child
   this.selection = function() {
     var nIndividuos = [];
     for (var i = 0; i < this.individuos.length; i++) {
-      // Picks random dna
       var padreA = random(this.listaPadres.slice(0,3)).dna;
       var padreB = random(this.listaPadres).dna;
-      // Creates child by using cruzar function
       var child = padreA.cruzar(padreB);
       child.mutar();
-      // Creates new rocket with child dna
       nIndividuos[i] = new Rocket(child);
     }
-    // This instance of individuos are the new individuos
     this.individuos = nIndividuos;
     this.generations++;
   };
 
-  // Calls for actualizar and show functions
   this.run = function() {
     for (var i = 0; i < this.cantIndividuos; i++) {
       this.individuos[i].actualizar();
-      // Displays individuos to screen
       this.individuos[i].show();
     }
   };
