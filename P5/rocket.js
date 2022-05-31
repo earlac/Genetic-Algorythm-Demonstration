@@ -78,7 +78,7 @@ function Rocket(dna) {
     //rotatates to the angle the rocket is pointing
     //creates a rectangle shape for rocket
     rectMode(CENTER);
-    rect(0, 0, 25, 25);
+    rect(0, 0, 15, 15);
     pop();
   };
 }
