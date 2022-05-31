@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(color(0, 0, 255));
   population.run();
   lifeP.html("Esperanza de vida: " +count);
   genP.html("Generacion: " + population.generations + "<br>");

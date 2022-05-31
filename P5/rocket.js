@@ -72,11 +72,9 @@ function Rocket(dna) {
     push();
     //color customization of individuos
     noStroke();
-    fill(255, 150);
+    fill(0,155);
     //translate to the postion of rocket
     translate(this.pos.x, this.pos.y);
-    //rotatates to the angle the rocket is pointing
-    //creates a rectangle shape for rocket
     rectMode(CENTER);
     rect(0, 0, 15, 15);
     pop();
