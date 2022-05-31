@@ -1,16 +1,11 @@
-
 var population;
-// Each rocket is alive till 400 frames
-var lifespan = 400;
-// Made to display count on screen
+var lifespan = 400;//la vida de la poblacion 
 var lifeP;
 var secP;
-// Keeps track of frames
 var count = 0;
-// Where individuos are trying to go
-var target;
-// Max force applied to rocket
+var target;//objetivo de los cuadros
 var fuerza = 0.2;
+var popsize = 25; //cantidad de individuos
 
 // Dimensions of barrier
 var rx = 100;
@@ -22,6 +17,8 @@ function setup() {
   createCanvas(400, 300);
   population = new Population();
   lifeP = createP();
+  popP = createP();
+  genP = createP();
   target = createVector(width / 2, 50);
 }
 

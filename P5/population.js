@@ -3,7 +3,7 @@ function Population() {
   // Array of individuos
   this.individuos = [];
   // Amount of individuos
-  this.cantIndividuos = 25;
+  this.cantIndividuos = popsize;
   // Amount padre rocket partners
   this.listaPadres = [];
 
