@@ -6,6 +6,7 @@ function Population() {
   this.cantIndividuos = popsize;
   // Amount padre rocket partners
   this.listaPadres = [];
+  this.generations = 0;
 
   // Associates a rocket to an array index
   for (var i = 0; i < this.cantIndividuos; i++) {
@@ -55,6 +56,7 @@ function Population() {
     }
     // This instance of individuos are the new individuos
     this.individuos = nIndividuos;
+    this.generations++;
   };
 
   // Calls for actualizar and show functions

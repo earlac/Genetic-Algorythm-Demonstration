@@ -27,6 +27,8 @@ function draw() {
   population.run();
   // Displays count to window
   lifeP.html(count);
+  genP.html("Generacion: " + population.generations + "<br>");
+  popP.html("Population Size: " + popsize + "<br>");
 
   count++;
   if (count == lifespan) {
