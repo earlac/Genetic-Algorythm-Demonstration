@@ -1,6 +1,5 @@
 
 function DNA(genes) {
-  // Recieves genes and create a dna object
   if (genes) {
     this.genes = genes;
   }
