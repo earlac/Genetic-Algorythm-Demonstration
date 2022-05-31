@@ -7,7 +7,7 @@ function Population() {
   // Amount padre rocket partners
   this.listaPadres = [];
   this.generations = 0;
-
+  pruebaP = createP();
   // Associates a rocket to an array index
   for (var i = 0; i < this.cantIndividuos; i++) {
     this.individuos[i] = new Rocket();
@@ -65,6 +65,19 @@ function Population() {
       this.individuos[i].actualizar();
       // Displays individuos to screen
       this.individuos[i].show();
+      //pruebaP = createP();
+      //pruebaP.html(this.individuos[i].fitness);
     }
+  };
+
+  this.mostrarDatos= function(){
+    pruebaP.html("");
+    var textoMostrar="";
+    for (var i = 0; i < this.cantIndividuos; i++) {
+      textoMostrar+= "Individuo #"+ i+ " , fitness: "+ this.individuos[i].fitness+ "<br>";
+      
+    }
+    
+    pruebaP.html(textoMostrar);
   };
 }

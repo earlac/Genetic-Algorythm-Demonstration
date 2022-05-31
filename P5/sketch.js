@@ -10,21 +10,25 @@ var popsize = 25; //cantidad de individuos
 function setup() {
   createCanvas(400, 300);
   population = new Population();
+  
   lifeP = createP();
   popP = createP();
   genP = createP();
+  
   target = createVector(width / 2, 50);
 }
 
 function draw() {
   background(color(0, 0, 255));
   population.run();
+  
   lifeP.html("Esperanza de vida: " +count);
   genP.html("Generacion: " + population.generations + "<br>");
   popP.html("Population Size: " + popsize + "<br>");
 
   count++;
   if (count == lifespan) {
+    population.mostrarDatos();
     population.evaluate();
     population.selection();
     count = 0;
